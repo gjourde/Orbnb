@@ -1,0 +1,343 @@
+/*Import des variables et mixin*/
+@import "variables";
+@import "mixin";
+
+/*Déclaration de la police*/
+@font-face {
+    font-family: "poppins-regular";
+    src: url("../fonts/poppins_regular.ttf");
+}
+
+/*Mise en page générale + police*/
+body {
+    font-family: "poppins-regular";
+    margin: auto;
+    @include dispo-flex(flex, column, center, center);
+
+    font-size: 16px;
+    max-width: 100%;
+    padding-top: 20px;
+}
+
+header {
+    width: 100%;
+    box-sizing: content-box;
+}
+
+/*Entête*/
+.entete {
+    @include dispo-flex(flex, row, space-between, center);
+    padding-left: 25px;
+}
+
+.logo {
+    height: 75px;
+}
+
+.menu {
+    ul {
+        list-style: none;
+        @include dispo-flex(flex, row, center, center);
+
+        padding: 0px;
+        margin: 0px;
+
+        li {
+            display: flex;
+            align-items: center;
+            height: 75px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-top: solid 4px white;
+
+            &:hover {
+                color: black;
+                border-top: solid 4px $bleu-clair;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                color: black;
+
+                &:active {
+                    color: $bleu-clair;
+                }
+            }
+        }
+    }
+}
+
+/*Titre et boite recherche*/
+.titre-recherche {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/*Titre de la page*/
+.titre-page {
+    h1 {
+        font-size: 16px;
+    }
+}
+
+.titre-page {
+    p {
+        font-size: 12px;
+    }
+}
+
+/*Boite recherche*/
+.recherche {
+    @include dispo-flex(flex, row, start, center);
+    margin-bottom: 10px;
+}
+
+.sai-recherche {
+    height: 36px;
+    width: 200px;
+    border-radius: 0;
+    border: solid 1px $gris-clair;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+#local {
+    font-weight: bold;
+    @include dispo-flex(flex, row, center, center);
+
+    background-color: $gris-clair;
+    border-radius: 10px 0 0 10px;
+    width: 40px;
+    height: 40px;
+}
+
+#loupe {
+    display: none;
+}
+
+.btn-recherche {
+    height: 40px;
+    width: 120px;
+    border: solid 0px $gris-clair;
+    background-color: $bleu-clair;
+    color: white;
+    border-radius: 0px 10px 10px 0px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #0043a7;
+    }
+
+
+    &:active {
+        background-color: #00265f;
+    }
+}
+
+/*boite filtre*/
+.boite-filtre {
+    @include dispo-flex(flex, row, start, center);
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    p {
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+}
+
+.btn {
+    @include dispo-flex(flex, row, start, start);
+    flex-wrap: wrap;
+}
+
+.btn-filtre {
+    border: solid 2px #d4d2d8;
+    border-radius: 10px;
+    @include dispo-flex(flex, row, center, center);
+
+    height: 40px;
+    margin-right: 15px;
+
+    i {
+        background-color: white;
+        color: #0065fc;
+        border-radius: 50px;
+        box-shadow: 0px 0px 6px 3px #a0a0a0;
+        @include dispo-flex(flex, row, center, center);
+
+        width: 25px;
+        height: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: $bleu-clair;
+        border: solid 2px #024ab6;
+    }
+
+    &:active {
+        background-color: #00255c;
+        border: solid 2px #001636;
+
+        .btn-text {
+            color: white;
+        }
+    }
+}
+
+.btn-text {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.info-resultat {
+    @include dispo-flex(flex, row, flex-start, center);
+
+    i {
+        @include dispo-flex(flex, row, center, center);
+
+        color: #0065fc;
+        font-size: 12px;
+        border: solid 1px #d1dae3;
+        border-radius: 10px;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+    }
+}
+
+.resultat-text {
+    font-size: 12px;
+}
+
+/*Section principale*/
+main {
+    width: 100%;
+}
+
+.boite-activites {
+    @include dispo-flex(flex, column, center, start);
+
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.boite-cards {
+    height: 400px;
+    width: 100%;
+    @include dispo-flex(flex, row, space-between, start);
+    flex-wrap: wrap;
+
+    margin-bottom: 15px;
+}
+
+.une-card {
+    width: 23%;
+    height: 100%;
+
+    a {
+        @extend %propiete-card;
+
+        &:hover {
+            box-shadow: 0px 0px 5px 2px $gris-ombre-hover;
+
+        }
+    }
+}
+
+.deux-card {
+    width: 23%;
+    height: 100%;
+    @include dispo-flex(flex, column, space-between, start);
+    flex-wrap: wrap;
+}
+
+.activite2 {
+    @include activite-hauteur(55%);
+}
+
+.activite3 {
+    @include activite-hauteur(40%);
+}
+
+.activite5 {
+    @include activite-hauteur(47%);
+}
+
+.activite6 {
+    @include activite-hauteur(47%);
+}
+
+.activite-img {
+    width: 100%;
+    height: 360px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.info-activite {
+    @include dispo-flex(flex, row, flex-start, center);
+
+    width: 100%;
+    height: 40px;
+
+    p {
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        margin-left: 10px;
+    }
+}
+
+.activite-img2 {
+    @include img-hauteur(180px);
+}
+
+.activite-img3 {
+    @include img-hauteur(120px);
+}
+
+.activite-img5,
+.activite-img6 {
+    @include img-hauteur(150px);
+}
+
+/*Pied de page*/
+footer {
+    width: 100%;
+    background-color: $gris-clair;
+    padding: 20px;
+    @include dispo-flex(flex, row, space-around, start);
+
+    box-sizing: border-box;
+}
+
+.boite-piedpage {
+    width: 33%;
+}
+
+.boite-piedpage {
+    a {
+        @include dispo-flex(flex, column, center, start);
+
+        text-decoration: none;
+        color: black;
+        font-size: 12px;
+    }
+}
+
+/*Import des media-query*/
+@import "media";

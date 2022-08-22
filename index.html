@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--   ***************************************************************  -->
+  <!--                      style.css + normalize.css                     -->
+  <!--   ***************************************************************  -->
+  <link rel="stylesheet" href="./asset/scss/style.css" />
+  <link rel="stylesheet" href="./asset/css/normalize.css" />
+
+  <!--   ***************************************************************  -->
+  <!--                               Favicon                              -->
+  <!--   ***************************************************************  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./asset/favicon_io/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" sizes="180x180" href="./asset/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./asset/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./asset/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./asset/favicon_io/site.webmanifest">
+
+  <!--   ***************************************************************  -->
+  <!--                            fontawesome                             -->
+  <!--   ***************************************************************  -->
+  <script src="https://kit.fontawesome.com/373bc4ed0b.js" crossorigin="anonymous"></script>
+  <title>Orbnb</title>
+</head>
+
+<body>
+  <!--   ***************************************************************  -->
+  <!--                              Entête                                -->
+  <!--   ***************************************************************  -->
+  <header>
+    <div class="entete">
+      <img src="./asset/images/logo.jpg" alt="logo Orbnb" class="logo" />
+      <nav class="menu">
+        <ul>
+          <li><a href="#entete">Hébergements</a></li>
+          <li><a href="#resultat">Activité</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--   ***************************************************************  -->
+    <!--                 Titre + Barre de recherche + Filtres               -->
+    <!--   ***************************************************************  -->
+    <div class="titre-recherche">
+      <div class="titre-page">
+        <h1 class="titre">
+          Trouvez votre hébergement pour des vacances de rêve
+        </h1>
+        <p>En plein centre ville ou en pleine nature</p>
+      </div>
+      <div class="boite-recherche">
+        <span class="recherche">
+          <i class="fa-solid fa-location-dot" id="local"></i>
+          <input type="text" id="sai-recherche" class="sai-recherche" name="sai-recherche"
+            placeholder="Saisir la recherche" />
+          <button class="btn-recherche" id="btn-recherche" type="button">
+            Rechercher
+          </button>
+          <i class="fa-solid fa-magnifying-glass" id="loupe"></i>
+        </span>
+      </div>
+      <div class="boite-filtre">
+        <p>Filtres</p>
+        <div class="btn">
+          <span class="btn-filtre">
+            <i class="fa-solid fa-money-bill-wave"></i>
+            <span class="btn-text">Économique</span>
+          </span>
+          <span class="btn-filtre">
+            <i class="fa-solid fa-people-roof"></i>
+            <span class="btn-text">Famille</span>
+          </span>
+          <span class="btn-filtre">
+            <i class="fa-solid fa-water"></i>
+            <span class="btn-text">Vue mer</span>
+          </span>
+          <span class="btn-filtre">
+            <i class="fa-solid fa-hotel"></i>
+            <span class="btn-text">Hôtel</span>
+          </span>
+        </div>
+      </div>
+      <div class="info-resultat">
+        <i class="fa-solid fa-info"></i>
+        <span class="resultat-text">
+          Plus de 500 logements sont disponibles dans cette ville
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!--   ***************************************************************  -->
+  <!--                       Section principale                           -->
+  <!--   ***************************************************************  -->
+  <main>
+    <section class="boite-activites" id="resultat">
+      <h2>Activités à Marseille</h2>
+      <div class="boite-cards">
+        <div class="une-card">
+          <a href="#">
+            <img class="activite-img" src="./asset/images/vieux_port.jpg" alt="vieux port" />
+            <div class="info-activite">
+              <p>Vieux Port</p>
+            </div>
+          </a>
+        </div>
+        <div class="deux-card">
+          <div class="activite2">
+            <a href="#">
+              <img class="activite-img2" src="./asset/images/fort_de_pomegues.jpg" alt="fort de pomegues" />
+              <div class="info-activite">
+                <p>Fort de Pomègues</p>
+              </div>
+            </a>
+          </div>
+          <div class="activite3">
+            <a href="#">
+              <img class="activite-img3" src="./asset/images/iles_du_frioul.jpg" alt="iles du frioul" />
+              <div class="info-activite">
+                <p>Îles du Frioul</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="une-card">
+          <a href="#">
+            <img class="activite-img" src="./asset/images/parc_national_des_calanques.jpg"
+              alt="parc national des calanques" />
+            <div class="info-activite">
+              <p>Parc National des Calanques</p>
+            </div>
+          </a>
+        </div>
+        <div class="deux-card">
+          <div class="activite5">
+            <a href="#">
+              <img class="activite-img5" src="./asset/images/notre_dame_de_la_garde.jpg" alt="notre dame de la garde" />
+              <div class="info-activite">
+                <p>Notre-Dame-de-la-Garde</p>
+              </div>
+            </a>
+          </div>
+          <div class="activite6">
+            <a href="#">
+              <img class="activite-img6" src="./asset/images/parc_longchamp.jpg" alt="parc longchamp" />
+              <div class="info-activite">
+                <p>Parc Longchamp</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--   ***************************************************************  -->
+  <!--                             Pied de page                           -->
+  <!--   ***************************************************************  -->
+  <footer>
+    <div class="boite-piedpage">
+      <h4>A propos</h4>
+      <a href="#">Fonctionnements du site</a>
+      <a href="#">Conditons générales de vente</a>
+      <a href="#">Données et confidentialités</a>
+    </div>
+    <div class="boite-piedpage">
+      <h4>Nos hébergemements</h4>
+      <a href="#">Charte qualité</a>
+      <a href="#">Soumettre votre hôtel</a>
+    </div>
+    <div class="boite-piedpage">
+      <h4>Assitances</h4>
+      <a href="#">Centre d'aide</a>
+      <a href="#">Nous contacter</a>
+    </div>
+  </footer>
+</body>
+
+</html>
